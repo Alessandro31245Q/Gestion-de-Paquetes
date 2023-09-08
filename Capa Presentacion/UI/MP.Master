@@ -1,0 +1,67 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MP.master.cs" Inherits="Capa_Presentacion.UI.MP" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>
+        <asp:ContentPlaceHolder ID="title" runat="server"></asp:ContentPlaceHolder>
+    </title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header>
+            <nav class="navbar" role="navigation" aria-label="main navigation" runat="server" id="divbuttons">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://bulma.io">
+      <i class="fas fa-shipping-fast"></i>
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu" >
+
+      <asp:Label CssClass="navbar-link" runat="server" ID="Label1"></asp:Label>
+
+    <div class="navbar-end">
+       
+
+      <div class="navbar-item" >
+        <div class="buttons">
+          <a class="button is-primary" href="/UI/Autenticacion/Registrarse.aspx" runat="server">
+            <strong>Registrarse</strong>
+          </a>
+          <a class="button is-light" href="/UI/Autenticacion/Login.aspx" runat="server">
+            Iniciar Sesion
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+        </header>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>
+    </p>
+  </div>
+</footer>
+</body>
+</html>

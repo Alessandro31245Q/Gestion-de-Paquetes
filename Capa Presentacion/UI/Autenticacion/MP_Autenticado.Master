@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MP_Autenticado.master.cs" Inherits="Capa_Presentacion.UI.Autenticacion.MP_Autenticado" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header>
+            <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://bulma.io">
+      <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    
+      <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="true">
+</asp:GridView>
+
+
+    <div class="navbar-end">
+        <div class="navbar-item">
+        <asp:Label ID="lblUserName" runat="server" Text=""></asp:Label>
+      </div>
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-primary">
+            <strong>Salir</strong>
+          </a>
+        </div>
+      </div>
+
+      <!-- Agrega el Label aquí para mostrar el nombre de usuario -->
+      
+    </div>
+  </div>
+</nav>
+            <asp:GridView ID="gridPaquetes" runat="server">
+    
+</asp:GridView>
+
+        </header>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>
